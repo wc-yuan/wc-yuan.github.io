@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" /> 
+		<title>心</title>
+		<style>
+			.noclick: -moz-user-select: none; 
+				-webkit-user-select: none; 
+				-ms-user-select: none; 
+				-khtml-user-select: none; 
+				user-select: none;
+		</style>
+	</head>
+	<body>
+	<div>
+		<img class="noclick" id="pt" style="height:70%;width:70%" src="./pt/heart (0).png" alt="no image"></img><br>
+		<img class="noclick" src="./pt/function.png" style="eight:40%;width:50%"></img></br>
+		<input style="height:200%l;width:50%" id="range" type="range" min="-5" max="0" value="0" step="0.02" oninput="change()" onchange="change()">k=</input>
+		<span id="value">0</span>
+		<script type='text/javascript'>
+			function change() {
+  				var value = document.getElementById('range').value ;
+  				document.getElementById('value').innerHTML = value;
+				var cur=-value*134/5
+				var curi = parseInt(cur)
+					value = document.getElementById('pt').src="./pt/heart ("+curi+").png";
+			}
+		</script>
+	</div>
+		
+ 
+	</body>
+</html>
