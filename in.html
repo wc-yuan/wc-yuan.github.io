@@ -146,8 +146,17 @@
 		<link rel="preload" href="./pt/heart (133).png" as="image" >
 		<link rel="preload" href="./pt/heart (134).png" as="image" >
 	</head>
-	<body>
-	<div>
+	<body onload="load()">
+	<img id ="ldin" class= "noclick" src="./pt/load.gif" alt="这是加载动画"></img>
+		<script>
+		function load(){
+			setTimeout(function(){
+			document.getElementById('bd').style.display="";
+			document.getElementById('ldin').style.display="none";},6000);
+			clearTimeout(timer);
+		}	
+		</script>
+	<div id="bd" style="display:none" >
 		<img class="noclick" id="pt" style="height:70%;width:70%" src="./pt/heart (0).png" alt="no image"></img><br>
 		<img class="noclick" src="./pt/function.png" style="eight:40%;width:50%"></img></br>
 		<input style="height:200%l;width:50%" id="range" type="range" min="-5" max="0" value="0" step="0.02" oninput="change()" onchange="change()">k=</input>
@@ -165,4 +174,5 @@
 		
  
 	</body>
+
 </html>
